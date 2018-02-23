@@ -56,6 +56,11 @@
 		1CA19FFF203FEA06005068A7 /* ILGLKImageView.m in Sources */ = {isa = PBXBuildFile; fileRef = 1CA19FFE203FEA06005068A7 /* ILGLKImageView.m */; };
 		1CA1A001203FEA93005068A7 /* IMG_0019.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = 1CA1A000203FEA93005068A7 /* IMG_0019.mp4 */; };
 		1CA1A003203FEACF005068A7 /* logo.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = 1CA1A002203FEACF005068A7 /* logo.jpeg */; };
+		1CA1A006203FF0D2005068A7 /* DrawView.m in Sources */ = {isa = PBXBuildFile; fileRef = 1CA1A004203FF0D2005068A7 /* DrawView.m */; };
+		1CA1A009203FF17A005068A7 /* CHWButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1CA1A008203FF17A005068A7 /* CHWButton.swift */; };
+		1CA1A00B203FF1AB005068A7 /* CountDownLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1CA1A00A203FF1AB005068A7 /* CountDownLabel.swift */; };
+		1CA1A00E203FF1CD005068A7 /* CountDownViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1CA1A00D203FF1CD005068A7 /* CountDownViewController.m */; };
+		1CA1A011203FF587005068A7 /* DrawViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1CA1A010203FF587005068A7 /* DrawViewController.m */; };
 		8051738E39294C535238661F /* libPods-APPSummary.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 0B49D360D2CF98E3FFFAE9E2 /* libPods-APPSummary.a */; };
 /* End PBXBuildFile section */
 
@@ -130,6 +135,15 @@
 		1CA19FFE203FEA06005068A7 /* ILGLKImageView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ILGLKImageView.m; sourceTree = "<group>"; };
 		1CA1A000203FEA93005068A7 /* IMG_0019.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = IMG_0019.mp4; sourceTree = "<group>"; };
 		1CA1A002203FEACF005068A7 /* logo.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = logo.jpeg; sourceTree = "<group>"; };
+		1CA1A004203FF0D2005068A7 /* DrawView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DrawView.m; sourceTree = "<group>"; };
+		1CA1A005203FF0D2005068A7 /* DrawView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DrawView.h; sourceTree = "<group>"; };
+		1CA1A007203FF179005068A7 /* APPSummary-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "APPSummary-Bridging-Header.h"; sourceTree = "<group>"; };
+		1CA1A008203FF17A005068A7 /* CHWButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CHWButton.swift; sourceTree = "<group>"; };
+		1CA1A00A203FF1AB005068A7 /* CountDownLabel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CountDownLabel.swift; sourceTree = "<group>"; };
+		1CA1A00C203FF1CD005068A7 /* CountDownViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CountDownViewController.h; sourceTree = "<group>"; };
+		1CA1A00D203FF1CD005068A7 /* CountDownViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CountDownViewController.m; sourceTree = "<group>"; };
+		1CA1A00F203FF587005068A7 /* DrawViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DrawViewController.h; sourceTree = "<group>"; };
+		1CA1A010203FF587005068A7 /* DrawViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DrawViewController.m; sourceTree = "<group>"; };
 		71274DAE356E360D2330E077 /* Pods-APPSummary.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-APPSummary.release.xcconfig"; path = "Pods/Target Support Files/Pods-APPSummary/Pods-APPSummary.release.xcconfig"; sourceTree = "<group>"; };
 		CEF6AA7CE442815860C115DC /* Pods-APPSummary.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-APPSummary.debug.xcconfig"; path = "Pods/Target Support Files/Pods-APPSummary/Pods-APPSummary.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -329,6 +343,10 @@
 				1CA19FE0203FE2AE005068A7 /* MusicViewController.m */,
 				1CA19FF9203FE9C5005068A7 /* GPUImageViewController.h */,
 				1CA19FFA203FE9C5005068A7 /* GPUImageViewController.m */,
+				1CA1A00C203FF1CD005068A7 /* CountDownViewController.h */,
+				1CA1A00D203FF1CD005068A7 /* CountDownViewController.m */,
+				1CA1A00F203FF587005068A7 /* DrawViewController.h */,
+				1CA1A010203FF587005068A7 /* DrawViewController.m */,
 				1CA19FFC203FEA06005068A7 /* view */,
 			);
 			path = ui;
@@ -361,8 +379,13 @@
 		1CA19FFC203FEA06005068A7 /* view */ = {
 			isa = PBXGroup;
 			children = (
+				1CA1A00A203FF1AB005068A7 /* CountDownLabel.swift */,
+				1CA1A008203FF17A005068A7 /* CHWButton.swift */,
+				1CA1A005203FF0D2005068A7 /* DrawView.h */,
+				1CA1A004203FF0D2005068A7 /* DrawView.m */,
 				1CA19FFD203FEA06005068A7 /* ILGLKImageView.h */,
 				1CA19FFE203FEA06005068A7 /* ILGLKImageView.m */,
+				1CA1A007203FF179005068A7 /* APPSummary-Bridging-Header.h */,
 			);
 			path = view;
 			sourceTree = "<group>";
@@ -418,6 +441,7 @@
 				TargetAttributes = {
 					1CA19F74203FDBFA005068A7 = {
 						CreatedOnToolsVersion = 9.2;
+						LastSwiftMigration = 0920;
 						ProvisioningStyle = Automatic;
 					};
 				};
@@ -549,19 +573,24 @@
 				1CA19F95203FE01E005068A7 /* UIView+ZJExtension.m in Sources */,
 				1CA19FFB203FE9C5005068A7 /* GPUImageViewController.m in Sources */,
 				1CA19FBD203FE0E2005068A7 /* CaptivePortalCheck.m in Sources */,
+				1CA1A009203FF17A005068A7 /* CHWButton.swift in Sources */,
 				1CA19FFF203FEA06005068A7 /* ILGLKImageView.m in Sources */,
 				1CA19F7D203FDBFA005068A7 /* ViewController.m in Sources */,
 				1CA19FDF203FE29E005068A7 /* NSObject+ZJUIExtension.m in Sources */,
 				1CA19F88203FDBFA005068A7 /* main.m in Sources */,
 				1CA19F7A203FDBFA005068A7 /* AppDelegate.m in Sources */,
+				1CA1A006203FF0D2005068A7 /* DrawView.m in Sources */,
 				1CA19F91203FDC6E005068A7 /* Constant.m in Sources */,
 				1CA19FF7203FE78E005068A7 /* GPUImageSoulFilter.m in Sources */,
 				1CA19FDB203FE119005068A7 /* AIViewController.m in Sources */,
 				1CA19FE5203FE2AF005068A7 /* FaceIDViewController.m in Sources */,
 				1CA19FE4203FE2AF005068A7 /* MusicViewController.m in Sources */,
 				1CA19FF1203FE756005068A7 /* CIFilter+LUT.m in Sources */,
+				1CA1A00B203FF1AB005068A7 /* CountDownLabel.swift in Sources */,
+				1CA1A00E203FF1CD005068A7 /* CountDownViewController.m in Sources */,
 				1CA19FDC203FE119005068A7 /* LaunchImageController.m in Sources */,
 				1CA19FF8203FE78E005068A7 /* GpUImageScaleFilter.m in Sources */,
+				1CA1A011203FF587005068A7 /* DrawViewController.m in Sources */,
 				1CA19FBF203FE0E2005068A7 /* AISphereView.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -697,6 +726,7 @@
 			baseConfigurationReference = CEF6AA7CE442815860C115DC /* Pods-APPSummary.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 2QC668LVNU;
 				INFOPLIST_FILE = APPSummary/Info.plist;
@@ -704,6 +734,9 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = cn.golfd.APPSummary;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "APPSummary/ui/view/APPSummary-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 3.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
@@ -713,6 +746,7 @@
 			baseConfigurationReference = 71274DAE356E360D2330E077 /* Pods-APPSummary.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 2QC668LVNU;
 				INFOPLIST_FILE = APPSummary/Info.plist;
@@ -720,6 +754,8 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = cn.golfd.APPSummary;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "APPSummary/ui/view/APPSummary-Bridging-Header.h";
+				SWIFT_VERSION = 3.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;

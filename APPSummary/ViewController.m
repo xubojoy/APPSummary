@@ -11,6 +11,8 @@
 #import "LaunchImageController.h"
 #import "FaceIDViewController.h"
 #import "GPUImageViewController.h"
+#import "CountDownViewController.h"
+#import "DrawViewController.h"
 @interface ViewController ()
 
 @property (nonatomic, strong) NSArray *dataArray;
@@ -30,7 +32,7 @@
     
     self.view.backgroundColor = [UIColor whiteColor];
     
-    self.dataArray = @[@"启动引导页动画",@"标签云",@"人脸识别",@"image处理"
+    self.dataArray = @[@"启动引导页动画",@"标签云",@"人脸识别",@"image处理",@"倒计时"
                        ];
     [self initTableView];
 }
@@ -109,6 +111,19 @@
         {
             GPUImageViewController *facevc = [[GPUImageViewController alloc] init];
             [self.navigationController pushViewController:facevc animated:YES];
+        }
+            break;
+        case 4:
+        {
+            CountDownViewController *facevc = [[CountDownViewController alloc] init];
+            [self.navigationController pushViewController:facevc animated:YES];
+        }
+            break;
+            
+        case 5:
+        {
+            DrawViewController *drawvc = [[DrawViewController alloc] init];
+            [self.navigationController pushViewController:drawvc animated:YES];
         }
             break;
 
