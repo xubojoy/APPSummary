@@ -7,7 +7,10 @@
 //
 
 #import "ViewController.h"
-
+#import "AIViewController.h"
+#import "LaunchImageController.h"
+#import "FaceIDViewController.h"
+#import "GPUImageViewController.h"
 @interface ViewController ()
 
 @property (nonatomic, strong) NSArray *dataArray;
@@ -16,13 +19,20 @@
 
 @implementation ViewController
 
+- (void)viewWillAppear:(BOOL)animated{
+    [super viewWillAppear:animated];
+    [self.navigationController setNavigationBarHidden:NO];
+}
+
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view, typically from a nib.
+    
     self.view.backgroundColor = [UIColor whiteColor];
     
-    self.dataArray = @[@"启动引导页动画",@"标签云"
+    self.dataArray = @[@"启动引导页动画",@"标签云",@"人脸识别",@"image处理"
                        ];
+    [self initTableView];
 }
 
 - (void)initTableView{
@@ -71,6 +81,45 @@
 {
     return 44;
 }
+
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
+    [tableView deselectRowAtIndexPath:indexPath animated:YES];
+    switch (indexPath.row) {
+        case 0:
+        {
+            LaunchImageController *lanuvc = [[LaunchImageController alloc] init];
+            lanuvc.showLaunchAnimation = YES;
+            [self.navigationController pushViewController:lanuvc animated:YES];
+        }
+            break;
+        case 1:
+        {
+            AIViewController *aivc = [[AIViewController alloc] init];
+            [self.navigationController pushViewController:aivc animated:YES];
+        }
+            break;
+
+        case 2:
+        {
+            FaceIDViewController *facevc = [[FaceIDViewController alloc] init];
+            [self.navigationController pushViewController:facevc animated:YES];
+        }
+            break;
+        case 3:
+        {
+            GPUImageViewController *facevc = [[GPUImageViewController alloc] init];
+            [self.navigationController pushViewController:facevc animated:YES];
+        }
+            break;
+
+        default:
+            break;
+    }
+    
+}
+
+
+
 
 
 - (void)didReceiveMemoryWarning {

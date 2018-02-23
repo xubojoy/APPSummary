@@ -7,7 +7,7 @@
 //
 
 #import "AppDelegate.h"
-
+#import <JPFPSStatus/JPFPSStatus.h>
 @interface AppDelegate ()
 
 @end
@@ -17,6 +17,20 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     // Override point for customization after application launch.
+    
+    self.window = [[UIWindow alloc] initWithFrame:[UIScreen mainScreen].bounds];
+    // 第一种办法：为了避免push和pop时导航条出现的黑块，给window设置一个背景色
+    self.window.backgroundColor = [UIColor whiteColor];
+    [self.window makeKeyAndVisible];
+    
+    self.viewController = [[ViewController alloc] init];
+    UINavigationController *nav = [[UINavigationController alloc] initWithRootViewController:self.viewController];
+    [nav.navigationController setNavigationBarHidden:NO];
+    self.window.rootViewController = nav;
+    
+#if defined(DEBUG)||defined(_DEBUG)
+    [[JPFPSStatus sharedInstance] open];
+#endif
     return YES;
 }
 
