@@ -34,10 +34,18 @@
     // Do any additional setup after loading the view, typically from a nib.
     
     self.view.backgroundColor = [UIColor whiteColor];
-    
+    self.title = @"首页";
+//    启用大标题显示
+    if (@available(iOS 11.0, *)) {
+        self.navigationController.navigationBar.prefersLargeTitles = YES;
+    } else {
+        // Fallback on earlier versions
+    }
+
     self.dataArray = @[@"启动引导页动画",@"标签云",@"人脸识别",@"image处理",@"倒计时",@"画板",@"wifi认证",@"指纹识别",@"QQ临时会话"
                        ];
     [self initTableView];
+    [self initSearch];
 }
 
 - (void)initTableView{
@@ -46,6 +54,26 @@
     self.tableView.delegate = self;
     self.tableView.showsVerticalScrollIndicator = NO;
     [self.view addSubview:self.tableView];
+}
+//搜索新特性
+- (void)initSearch{
+    self.searchController = [[UISearchController alloc] initWithSearchResultsController:nil];
+    self.searchController.delegate = self;
+    self.searchController.searchResultsUpdater = self;
+    self.searchController.searchBar.placeholder = @"搜索";
+    self.searchController.dimsBackgroundDuringPresentation = NO;
+    self.searchController.hidesNavigationBarDuringPresentation = YES;
+    [self.searchController.searchBar sizeToFit];
+//    self.tableView.tableHeaderView = self.searchController.searchBar;
+    if (@available(iOS 11.0, *)) {
+        self.navigationItem.searchController = self.searchController;
+    } else {
+        //         Fallback on earlier versions
+    }
+}
+
+- (void)updateSearchResultsForSearchController:(UISearchController *)searchController{
+    
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
