@@ -15,6 +15,7 @@
 #import "DrawViewController.h"
 #import "WIFICheckViewController.h"
 #import "TouchIDViewController.h"
+#import "QQTmpChatViewController.h"
 @interface ViewController ()
 
 @property (nonatomic, strong) NSArray *dataArray;
@@ -34,7 +35,7 @@
     
     self.view.backgroundColor = [UIColor whiteColor];
     
-    self.dataArray = @[@"启动引导页动画",@"标签云",@"人脸识别",@"image处理",@"倒计时",@"画板",@"wifi认证",@"指纹识别"
+    self.dataArray = @[@"启动引导页动画",@"标签云",@"人脸识别",@"image处理",@"倒计时",@"画板",@"wifi认证",@"指纹识别",@"QQ临时会话"
                        ];
     [self initTableView];
 }
@@ -111,14 +112,14 @@
             break;
         case 3:
         {
-            GPUImageViewController *facevc = [[GPUImageViewController alloc] init];
-            [self.navigationController pushViewController:facevc animated:YES];
+            GPUImageViewController *gpuvc = [[GPUImageViewController alloc] init];
+            [self.navigationController pushViewController:gpuvc animated:YES];
         }
             break;
         case 4:
         {
-            CountDownViewController *facevc = [[CountDownViewController alloc] init];
-            [self.navigationController pushViewController:facevc animated:YES];
+            CountDownViewController *countvc = [[CountDownViewController alloc] init];
+            [self.navigationController pushViewController:countvc animated:YES];
         }
             break;
             
@@ -140,6 +141,12 @@
         {
             TouchIDViewController *touchIDvc = [[TouchIDViewController alloc] init];
             [self.navigationController pushViewController:touchIDvc animated:YES];
+        }
+            break;
+        case 8:
+        {
+            QQTmpChatViewController *qqtmpvc = [[QQTmpChatViewController alloc] init];
+            [self.navigationController pushViewController:qqtmpvc animated:YES];
         }
             break;
         default:
