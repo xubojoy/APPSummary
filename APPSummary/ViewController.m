@@ -13,6 +13,8 @@
 #import "GPUImageViewController.h"
 #import "CountDownViewController.h"
 #import "DrawViewController.h"
+#import "WIFICheckViewController.h"
+#import "TouchIDViewController.h"
 @interface ViewController ()
 
 @property (nonatomic, strong) NSArray *dataArray;
@@ -32,7 +34,7 @@
     
     self.view.backgroundColor = [UIColor whiteColor];
     
-    self.dataArray = @[@"启动引导页动画",@"标签云",@"人脸识别",@"image处理",@"倒计时"
+    self.dataArray = @[@"启动引导页动画",@"标签云",@"人脸识别",@"image处理",@"倒计时",@"画板",@"wifi认证",@"指纹识别"
                        ];
     [self initTableView];
 }
@@ -127,6 +129,19 @@
         }
             break;
 
+        case 6:
+        {
+            WIFICheckViewController *wifivc = [[WIFICheckViewController alloc] init];
+            [self.navigationController pushViewController:wifivc animated:YES];
+        }
+            break;
+            
+        case 7:
+        {
+            TouchIDViewController *touchIDvc = [[TouchIDViewController alloc] init];
+            [self.navigationController pushViewController:touchIDvc animated:YES];
+        }
+            break;
         default:
             break;
     }
