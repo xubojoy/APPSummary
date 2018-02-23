@@ -7,6 +7,7 @@
 //
 
 #import <Foundation/Foundation.h>
+#import <UIKit/UIKit.h>
 typedef NS_ENUM(NSUInteger, EndTimeType) {
     EndTimeTypeDay,
     EndTimeTypeWeek,
@@ -14,4 +15,5 @@ typedef NS_ENUM(NSUInteger, EndTimeType) {
 };
 @interface DateUtils : NSObject
 + (NSString *)currentCycleEndTimeStrWithType:(EndTimeType)type;
++ (int)compareOneDay:(NSString *)oneDay withAnotherDay:(NSString *)anotherDay format:(NSString *)format;
 @end
