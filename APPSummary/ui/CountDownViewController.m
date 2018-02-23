@@ -21,7 +21,6 @@
     self.view.backgroundColor = [UIColor whiteColor];
     [self initCHWButton];
     [self initCountdownLabel];
-    [self initDrawView];
 }
 
 - (void)initCHWButton{

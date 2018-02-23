@@ -61,6 +61,9 @@
 		1CA1A00B203FF1AB005068A7 /* CountDownLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1CA1A00A203FF1AB005068A7 /* CountDownLabel.swift */; };
 		1CA1A00E203FF1CD005068A7 /* CountDownViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1CA1A00D203FF1CD005068A7 /* CountDownViewController.m */; };
 		1CA1A011203FF587005068A7 /* DrawViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1CA1A010203FF587005068A7 /* DrawViewController.m */; };
+		1CA1A014203FF707005068A7 /* WIFICheckViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1CA1A013203FF707005068A7 /* WIFICheckViewController.m */; };
+		1CA1A017203FF872005068A7 /* TouchIDViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1CA1A016203FF872005068A7 /* TouchIDViewController.m */; };
+		1CA1A01A203FFB0F005068A7 /* QQTmpChatViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1CA1A019203FFB0F005068A7 /* QQTmpChatViewController.m */; };
 		8051738E39294C535238661F /* libPods-APPSummary.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 0B49D360D2CF98E3FFFAE9E2 /* libPods-APPSummary.a */; };
 /* End PBXBuildFile section */
 
@@ -144,6 +147,12 @@
 		1CA1A00D203FF1CD005068A7 /* CountDownViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CountDownViewController.m; sourceTree = "<group>"; };
 		1CA1A00F203FF587005068A7 /* DrawViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DrawViewController.h; sourceTree = "<group>"; };
 		1CA1A010203FF587005068A7 /* DrawViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DrawViewController.m; sourceTree = "<group>"; };
+		1CA1A012203FF707005068A7 /* WIFICheckViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = WIFICheckViewController.h; sourceTree = "<group>"; };
+		1CA1A013203FF707005068A7 /* WIFICheckViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = WIFICheckViewController.m; sourceTree = "<group>"; };
+		1CA1A015203FF872005068A7 /* TouchIDViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TouchIDViewController.h; sourceTree = "<group>"; };
+		1CA1A016203FF872005068A7 /* TouchIDViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TouchIDViewController.m; sourceTree = "<group>"; };
+		1CA1A018203FFB0F005068A7 /* QQTmpChatViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = QQTmpChatViewController.h; sourceTree = "<group>"; };
+		1CA1A019203FFB0F005068A7 /* QQTmpChatViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = QQTmpChatViewController.m; sourceTree = "<group>"; };
 		71274DAE356E360D2330E077 /* Pods-APPSummary.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-APPSummary.release.xcconfig"; path = "Pods/Target Support Files/Pods-APPSummary/Pods-APPSummary.release.xcconfig"; sourceTree = "<group>"; };
 		CEF6AA7CE442815860C115DC /* Pods-APPSummary.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-APPSummary.debug.xcconfig"; path = "Pods/Target Support Files/Pods-APPSummary/Pods-APPSummary.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -347,6 +356,12 @@
 				1CA1A00D203FF1CD005068A7 /* CountDownViewController.m */,
 				1CA1A00F203FF587005068A7 /* DrawViewController.h */,
 				1CA1A010203FF587005068A7 /* DrawViewController.m */,
+				1CA1A012203FF707005068A7 /* WIFICheckViewController.h */,
+				1CA1A013203FF707005068A7 /* WIFICheckViewController.m */,
+				1CA1A015203FF872005068A7 /* TouchIDViewController.h */,
+				1CA1A016203FF872005068A7 /* TouchIDViewController.m */,
+				1CA1A018203FFB0F005068A7 /* QQTmpChatViewController.h */,
+				1CA1A019203FFB0F005068A7 /* QQTmpChatViewController.m */,
 				1CA19FFC203FEA06005068A7 /* view */,
 			);
 			path = ui;
@@ -574,10 +589,13 @@
 				1CA19FFB203FE9C5005068A7 /* GPUImageViewController.m in Sources */,
 				1CA19FBD203FE0E2005068A7 /* CaptivePortalCheck.m in Sources */,
 				1CA1A009203FF17A005068A7 /* CHWButton.swift in Sources */,
+				1CA1A014203FF707005068A7 /* WIFICheckViewController.m in Sources */,
 				1CA19FFF203FEA06005068A7 /* ILGLKImageView.m in Sources */,
 				1CA19F7D203FDBFA005068A7 /* ViewController.m in Sources */,
 				1CA19FDF203FE29E005068A7 /* NSObject+ZJUIExtension.m in Sources */,
 				1CA19F88203FDBFA005068A7 /* main.m in Sources */,
+				1CA1A017203FF872005068A7 /* TouchIDViewController.m in Sources */,
+				1CA1A01A203FFB0F005068A7 /* QQTmpChatViewController.m in Sources */,
 				1CA19F7A203FDBFA005068A7 /* AppDelegate.m in Sources */,
 				1CA1A006203FF0D2005068A7 /* DrawView.m in Sources */,
 				1CA19F91203FDC6E005068A7 /* Constant.m in Sources */,
