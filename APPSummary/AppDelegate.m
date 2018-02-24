@@ -8,25 +8,28 @@
 
 #import "AppDelegate.h"
 #import <JPFPSStatus/JPFPSStatus.h>
+#import "UIColor+Random.h"
+#import "APPSummaryTabbarController.h"
 @interface AppDelegate ()
 
 @end
 
 @implementation AppDelegate
-
+- (UIWindow *)window
+{
+    if(!_window)
+    {
+        _window = [[UIWindow alloc] initWithFrame:[UIScreen mainScreen].bounds];
+        _window.backgroundColor = [UIColor RandomColor];
+        [_window makeKeyAndVisible];
+    }
+    return _window;
+}
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     // Override point for customization after application launch.
     
-    self.window = [[UIWindow alloc] initWithFrame:[UIScreen mainScreen].bounds];
-    // 第一种办法：为了避免push和pop时导航条出现的黑块，给window设置一个背景色
-    self.window.backgroundColor = [UIColor whiteColor];
-    [self.window makeKeyAndVisible];
-    
-    self.viewController = [[ViewController alloc] init];
-    UINavigationController *nav = [[UINavigationController alloc] initWithRootViewController:self.viewController];
-    [nav.navigationController setNavigationBarHidden:NO];
-    self.window.rootViewController = nav;
+    self.window.rootViewController = [[APPSummaryTabbarController alloc] init];
     
 #if defined(DEBUG)||defined(_DEBUG)
     [[JPFPSStatus sharedInstance] open];

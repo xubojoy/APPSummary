@@ -90,7 +90,6 @@
     else
     {
         //不支持指纹识别，LOG出错误详情
-        
         switch (error.code) {
             case LAErrorTouchIDNotEnrolled:
             {
@@ -108,7 +107,6 @@
                 break;
             }
         }
-        
         NSLog(@"%@",error.localizedDescription);
     }
 }
