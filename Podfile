@@ -3,6 +3,7 @@ platform :ios, '8.0'
 #use_frameworks!
 
 target 'APPSummary' do
+     pod 'CYLTabBarController', '~> 1.17.6'
      pod 'lottie-ios', '~> 2.1.4'
      pod 'TYAttributedLabel', '~> 2.6.2'
      pod 'SDWebImage', '~> 4.2.1'
@@ -14,4 +15,6 @@ target 'APPSummary' do
 #     pod 'FJAlertView', '~> 0.0.4'
      pod 'IQKeyboardManager', '~> 5.0.7'
 #     pod 'FTLinearActivityIndicator', '~> 1.0.4'
+     pod 'FDFullscreenPopGesture', '~> 1.1'
+     pod 'AXWebViewController', '~> 0.7.1'
 end

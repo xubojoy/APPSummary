@@ -1,12 +1,12 @@
 //
-//  ViewController.m
+//  APPUISummaryController.m
 //  APPSummary
 //
-//  Created by xubojoy on 2018/2/23.
+//  Created by xubojoy on 2018/2/24.
 //  Copyright © 2018年 xubojoy. All rights reserved.
 //
 
-#import "ViewController.h"
+#import "APPUISummaryController.h"
 #import "AIViewController.h"
 #import "LaunchImageController.h"
 #import "FaceIDViewController.h"
@@ -18,18 +18,16 @@
 #import "QQTmpChatViewController.h"
 #import "DateCalendarController.h"
 #import "Constant.h"
-@interface ViewController ()
-
+@interface APPUISummaryController ()
 @property (nonatomic, strong) NSArray *dataUIArray;
 @property (nonatomic, strong) NSArray *dataArray;
-
 @end
 
-@implementation ViewController
+@implementation APPUISummaryController
 
 - (void)viewWillAppear:(BOOL)animated{
     [super viewWillAppear:animated];
-    [self.navigationController setNavigationBarHidden:NO];
+//    [self.navigationController setNavigationBarHidden:NO];
 }
 
 - (void)viewDidLoad {
@@ -38,17 +36,17 @@
     
     self.view.backgroundColor = [UIColor whiteColor];
     self.title = @"首页";
-//    启用大标题显示
+    //    启用大标题显示
     if (@available(iOS 11.0, *)) {
         self.navigationController.navigationBar.prefersLargeTitles = YES;
     } else {
         // Fallback on earlier versions
     }
-
+    
     self.dataUIArray = @[@"启动引导页动画",@"标签云",@"人脸识别",@"image处理",@"倒计时",@"画板",@"wifi认证",@"指纹识别",@"QQ临时会话"
-                       ];
-    self.dataArray = @[@"时间计算"
                          ];
+    self.dataArray = @[@"时间计算"
+                       ];
     [self initTableView];
     [self initSearch];
 }
@@ -69,7 +67,7 @@
     self.searchController.dimsBackgroundDuringPresentation = NO;
     self.searchController.hidesNavigationBarDuringPresentation = YES;
     [self.searchController.searchBar sizeToFit];
-//    self.tableView.tableHeaderView = self.searchController.searchBar;
+    //    self.tableView.tableHeaderView = self.searchController.searchBar;
     if (@available(iOS 11.0, *)) {
         self.navigationItem.searchController = self.searchController;
     } else {
@@ -225,15 +223,6 @@
     }
     
     
-}
-
-
-
-
-
-- (void)didReceiveMemoryWarning {
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
 }
 
 
