@@ -84,9 +84,6 @@ EOM
   esac
 }
 if [[ "$CONFIGURATION" == "Debug" ]]; then
-  install_resource "${PODS_ROOT}/AXIndicatorView/AXIndicatorView/Classes/AXIndicatorView.bundle"
-  install_resource "${PODS_ROOT}/AXPracticalHUD/AXPracticalHUD/AXPracticalHUD/AXPracticalHUD.bundle"
-  install_resource "${PODS_ROOT}/AXWebViewController/AXWebViewController/AXWebViewController/AXWebViewController.bundle"
   install_resource "${PODS_ROOT}/GPUImage/framework/Resources/lookup.png"
   install_resource "${PODS_ROOT}/GPUImage/framework/Resources/lookup_amatorka.png"
   install_resource "${PODS_ROOT}/GPUImage/framework/Resources/lookup_miss_etikate.png"
@@ -95,9 +92,6 @@ if [[ "$CONFIGURATION" == "Debug" ]]; then
   install_resource "${PODS_ROOT}/IQKeyboardManager/IQKeyboardManager/Resources/IQKeyboardManager.bundle"
 fi
 if [[ "$CONFIGURATION" == "Release" ]]; then
-  install_resource "${PODS_ROOT}/AXIndicatorView/AXIndicatorView/Classes/AXIndicatorView.bundle"
-  install_resource "${PODS_ROOT}/AXPracticalHUD/AXPracticalHUD/AXPracticalHUD/AXPracticalHUD.bundle"
-  install_resource "${PODS_ROOT}/AXWebViewController/AXWebViewController/AXWebViewController/AXWebViewController.bundle"
   install_resource "${PODS_ROOT}/GPUImage/framework/Resources/lookup.png"
   install_resource "${PODS_ROOT}/GPUImage/framework/Resources/lookup_amatorka.png"
   install_resource "${PODS_ROOT}/GPUImage/framework/Resources/lookup_miss_etikate.png"

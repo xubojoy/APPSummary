@@ -7,8 +7,9 @@
 //
 
 #import "APPQuestionSummaryController.h"
-#import <AXWebViewController.h>
+//#import <AXWebViewController.h>
 #import "Constant.h"
+#import "APPQuestionDetailController.h"
 @interface APPQuestionSummaryController ()
 @property (nonatomic, strong) NSArray *dataArray;
 @end
@@ -92,11 +93,14 @@
             break;
     }
     
-    AXWebViewController *webVC = [[AXWebViewController alloc] initWithAddress:urlStr];
-    webVC.navigationType = AXWebViewControllerNavigationBarItem;
-    webVC.showsToolBar = NO;
-    webVC.navigationController.navigationBar.translucent = YES;
-    [self.navigationController pushViewController:webVC animated:YES];
+//    AXWebViewController *webVC = [[AXWebViewController alloc] initWithAddress:urlStr];
+//    webVC.navigationType = AXWebViewControllerNavigationBarItem;
+//    webVC.showsToolBar = NO;
+//    webVC.navigationController.navigationBar.translucent = YES;
+//    [self.navigationController pushViewController:webVC animated:YES];
+    APPQuestionDetailController *appquestionvc = [[APPQuestionDetailController alloc] init];
+    appquestionvc.urlStr = urlStr;
+    [self.navigationController pushViewController:appquestionvc animated:YES];
 }
 
 
