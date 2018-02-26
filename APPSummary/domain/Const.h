@@ -1,14 +1,12 @@
 //
-//  Constant.h
+//  Const.h
 //  APPSummary
 //
-//  Created by xubojoy on 2018/2/23.
+//  Created by xubojoy on 2018/2/26.
 //  Copyright © 2018年 xubojoy. All rights reserved.
 //
 
 #import <Foundation/Foundation.h>
-
-
 #define request_url @"http://xubojoy.cn"
 
 
@@ -71,6 +69,6 @@ OBJC_EXTERN CFStringRef MGCopyAnswer(CFStringRef key) WEAK_IMPORT_ATTRIBUTE;
 //颜色
 #define splite_line_color         @"#cccccc"
 
-@interface Constant : NSObject
+@interface Const : NSObject
 
 @end

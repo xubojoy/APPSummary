@@ -9,7 +9,6 @@
 #import "FaceIDViewController.h"
 #import <CoreImage/CoreImage.h>
 //#import <FJAlertView/Constant.h>
-#import "Constant.h"
 #define imageName [NSString stringWithFormat:@"face-%d", _imageTag]
 
 @interface FaceIDViewController ()

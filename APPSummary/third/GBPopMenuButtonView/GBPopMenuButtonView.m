@@ -8,8 +8,7 @@
 
 #import "GBPopMenuButtonView.h"
 #import "GBPopMenuButtonItem.h"
-#import "Constant.h"
-#import "ColorUtils.h"
+
 #define GBRotationAngle M_PI / 20
 
 #define GBScreenWidth [UIScreen mainScreen].bounds.size.width
@@ -94,7 +93,7 @@
 -(void)addSubviews{
     UIButton *mainButton = [UIButton buttonWithType:UIButtonTypeCustom];
     [mainButton addTarget:self action:@selector(showItems) forControlEvents:UIControlEventTouchUpInside];
-    [mainButton setTitleColor:[ColorUtils colorWithHexString:splite_line_color] forState:UIControlStateNormal];
+    [mainButton setTitleColor:[ColorUtil colorWithHexString:splite_line_color] forState:UIControlStateNormal];
     [mainButton setBackgroundColor:[UIColor orangeColor]];
     [mainButton setTitle:@"流行>" forState:UIControlStateNormal];
     [mainButton.titleLabel setFont:[UIFont systemFontOfSize:font_14_size]];
@@ -102,7 +101,7 @@
     self.mainButton.frame = CGRectMake(0, 0, self.frame.size.width, self.frame.size.height);
     mainButton.layer.cornerRadius = self.frame.size.width / 2.0;
     mainButton.layer.borderWidth = splite_line_height;
-    mainButton.layer.borderColor = [ColorUtils colorWithHexString:splite_line_color].CGColor;
+    mainButton.layer.borderColor = [ColorUtil colorWithHexString:splite_line_color].CGColor;
     mainButton.layer.masksToBounds = YES;
     
 #pragma mark -- 菜单选项

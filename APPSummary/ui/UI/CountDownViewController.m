@@ -8,7 +8,6 @@
 
 #import "CountDownViewController.h"
 #import "APPSummary-Swift.h"
-#import "Constant.h"
 @interface CountDownViewController ()
 
 @end

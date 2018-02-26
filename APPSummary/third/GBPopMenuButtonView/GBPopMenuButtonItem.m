@@ -8,8 +8,6 @@
 
 #import "GBPopMenuButtonItem.h"
 #import "GBAnimationTool.h"
-#import "ColorUtils.h"
-#import "Constant.h"
 @interface GBPopMenuButtonItem (){
     CGPoint _orginPoint; //记录平移前的位置
     CGFloat _angle;      //记录平移时的角度
@@ -34,7 +32,7 @@
         self.frame = CGRectMake(0, 0, size.width, size.height);
         self.layer.cornerRadius = size.width / 2.0;
         self.layer.borderWidth = splite_line_height;
-        self.layer.borderColor = [ColorUtils colorWithHexString:splite_line_color].CGColor;
+        self.layer.borderColor = [ColorUtil colorWithHexString:splite_line_color].CGColor;
         self.layer.masksToBounds = YES;
         _radius = 400.0f;
         

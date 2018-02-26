@@ -18,7 +18,7 @@
 #import "QQTmpChatViewController.h"
 #import "DateCalendarController.h"
 #import "PopViewController.h"
-#import "Constant.h"
+
 
 @interface APPUISummaryController ()
 @property (nonatomic, strong) NSArray *dataUIArray;

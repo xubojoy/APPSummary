@@ -8,7 +8,6 @@
 
 #import "DrawViewController.h"
 #import "DrawView.h"
-#import "Constant.h"
 @interface DrawViewController ()
 @property (nonatomic, strong) DrawView *drawView;
 @end

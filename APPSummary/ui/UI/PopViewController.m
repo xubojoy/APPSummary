@@ -8,7 +8,7 @@
 
 #import "PopViewController.h"
 #import "GBPopMenuButtonView.h"
-#import "Constant.h"
+#import <FJAlertView.h>
 @interface PopViewController ()<GBMenuButtonDelegate>
 @property (nonatomic, strong) WRCustomNavigationBar *customNavBar;
 @property (nonatomic, strong) GBPopMenuButtonView *popMenuButtonView;
@@ -23,6 +23,7 @@
     self.view.backgroundColor = [UIColor whiteColor];
     [self initHeaderView];
     [self initPopMenuButtonView];
+    [self initFJAlertView];
 }
 
 /**
@@ -51,11 +52,27 @@
     
 }
 
+- (void)initFJAlertView{
+    UIButton *btn = [UIButton buttonWithType:UIButtonTypeSystem];
+    [btn setTitle:@"alertView" forState:UIControlStateNormal];
+    [btn setTitleColor:[UIColor blackColor] forState:UIControlStateNormal];
+    btn.titleLabel.font = [UIFont systemFontOfSize:font_14_size];
+    btn.backgroundColor = [UIColor brownColor];
+    btn.frame = CGRectMake(0, self.popMenuButtonView.frame.origin.y+100, 100, 40);
+    [btn addTarget:self action:@selector(buttonPressed) forControlEvents:UIControlEventTouchUpInside];
+    [self.view addSubview:btn];
+}
+
 #pragma mark GBMenuButtonDelegate--------
 - (void)menuButtonSelectedAtIdex:(NSInteger)index{
     [self.popMenuButtonView hideItems];
     NSLog(@"点击了-------%ld",(long)index);
     
+}
+
+- (void)buttonPressed{
+    FJAlertView *alert = [[FJAlertView alloc] initWithFrame:CGRectMake(0, 0, screen_width, screen_height) title:@"标题" message:@"内容" buttonTitle:nil];
+    [alert show];
 }
 
 - (void)didReceiveMemoryWarning {

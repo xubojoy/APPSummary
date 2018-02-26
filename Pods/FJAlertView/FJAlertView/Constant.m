@@ -1,8 +1,8 @@
 //
 //  Constant.m
-//  APPSummary
+//  CustomAlertViewDemo
 //
-//  Created by xubojoy on 2018/2/23.
+//  Created by xubojoy on 2018/2/7.
 //  Copyright © 2018年 xubojoy. All rights reserved.
 //
 

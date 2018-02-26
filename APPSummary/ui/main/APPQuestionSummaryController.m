@@ -7,8 +7,6 @@
 //
 
 #import "APPQuestionSummaryController.h"
-//#import <AXWebViewController.h>
-#import "Constant.h"
 #import "APPQuestionDetailController.h"
 @interface APPQuestionSummaryController ()
 @property (nonatomic, strong) NSArray *dataArray;

@@ -43,13 +43,13 @@
 		1C8F35692043E0CE004DDC06 /* PopViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1C8F35682043E0CE004DDC06 /* PopViewController.m */; };
 		1C8F356F2043E1E5004DDC06 /* WRNavigationBar.m in Sources */ = {isa = PBXBuildFile; fileRef = 1C8F356B2043E1E4004DDC06 /* WRNavigationBar.m */; };
 		1C8F35702043E1E5004DDC06 /* WRCustomNavigationBar.m in Sources */ = {isa = PBXBuildFile; fileRef = 1C8F356E2043E1E4004DDC06 /* WRCustomNavigationBar.m */; };
-		1C8F35732043E2D1004DDC06 /* ColorUtils.m in Sources */ = {isa = PBXBuildFile; fileRef = 1C8F35722043E2D1004DDC06 /* ColorUtils.m */; };
+		1C8F357A2043F5D4004DDC06 /* ColorUtil.m in Sources */ = {isa = PBXBuildFile; fileRef = 1C8F35792043F5D4004DDC06 /* ColorUtil.m */; };
+		1C8F357D2043F627004DDC06 /* Const.m in Sources */ = {isa = PBXBuildFile; fileRef = 1C8F357C2043F627004DDC06 /* Const.m */; };
 		1CA19F7A203FDBFA005068A7 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 1CA19F79203FDBFA005068A7 /* AppDelegate.m */; };
 		1CA19F80203FDBFA005068A7 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1CA19F7E203FDBFA005068A7 /* Main.storyboard */; };
 		1CA19F82203FDBFA005068A7 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1CA19F81203FDBFA005068A7 /* Assets.xcassets */; };
 		1CA19F85203FDBFA005068A7 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1CA19F83203FDBFA005068A7 /* LaunchScreen.storyboard */; };
 		1CA19F88203FDBFA005068A7 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 1CA19F87203FDBFA005068A7 /* main.m */; };
-		1CA19F91203FDC6E005068A7 /* Constant.m in Sources */ = {isa = PBXBuildFile; fileRef = 1CA19F90203FDC6E005068A7 /* Constant.m */; };
 		1CA19F95203FE01E005068A7 /* UIView+ZJExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = 1CA19F94203FE01E005068A7 /* UIView+ZJExtension.m */; };
 		1CA19FBD203FE0E2005068A7 /* CaptivePortalCheck.m in Sources */ = {isa = PBXBuildFile; fileRef = 1CA19F99203FE0E2005068A7 /* CaptivePortalCheck.m */; };
 		1CA19FBE203FE0E2005068A7 /* .gitkeep in Resources */ = {isa = PBXBuildFile; fileRef = 1CA19F9D203FE0E2005068A7 /* .gitkeep */; };
@@ -155,9 +155,11 @@
 		1C8F356C2043E1E4004DDC06 /* WRCustomNavigationBar.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WRCustomNavigationBar.h; sourceTree = "<group>"; };
 		1C8F356D2043E1E4004DDC06 /* WRNavigationBar.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WRNavigationBar.h; sourceTree = "<group>"; };
 		1C8F356E2043E1E4004DDC06 /* WRCustomNavigationBar.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WRCustomNavigationBar.m; sourceTree = "<group>"; };
-		1C8F35712043E2D1004DDC06 /* ColorUtils.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ColorUtils.h; sourceTree = "<group>"; };
-		1C8F35722043E2D1004DDC06 /* ColorUtils.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ColorUtils.m; sourceTree = "<group>"; };
 		1C8F35772043E86F004DDC06 /* APPSummary-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "APPSummary-Prefix.pch"; sourceTree = "<group>"; };
+		1C8F35782043F5D4004DDC06 /* ColorUtil.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ColorUtil.h; sourceTree = "<group>"; };
+		1C8F35792043F5D4004DDC06 /* ColorUtil.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ColorUtil.m; sourceTree = "<group>"; };
+		1C8F357B2043F627004DDC06 /* Const.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Const.h; sourceTree = "<group>"; };
+		1C8F357C2043F627004DDC06 /* Const.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Const.m; sourceTree = "<group>"; };
 		1CA19F75203FDBFA005068A7 /* APPSummary.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = APPSummary.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		1CA19F78203FDBFA005068A7 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		1CA19F79203FDBFA005068A7 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -166,8 +168,6 @@
 		1CA19F84203FDBFA005068A7 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		1CA19F86203FDBFA005068A7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		1CA19F87203FDBFA005068A7 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
-		1CA19F8F203FDC6E005068A7 /* Constant.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Constant.h; sourceTree = "<group>"; };
-		1CA19F90203FDC6E005068A7 /* Constant.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Constant.m; sourceTree = "<group>"; };
 		1CA19F93203FE01E005068A7 /* UIView+ZJExtension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+ZJExtension.h"; sourceTree = "<group>"; };
 		1CA19F94203FE01E005068A7 /* UIView+ZJExtension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+ZJExtension.m"; sourceTree = "<group>"; };
 		1CA19F98203FE0E2005068A7 /* CaptivePortalCheck.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CaptivePortalCheck.h; sourceTree = "<group>"; };
@@ -424,8 +424,8 @@
 		1CA19F8E203FDC5C005068A7 /* domain */ = {
 			isa = PBXGroup;
 			children = (
-				1CA19F8F203FDC6E005068A7 /* Constant.h */,
-				1CA19F90203FDC6E005068A7 /* Constant.m */,
+				1C8F357B2043F627004DDC06 /* Const.h */,
+				1C8F357C2043F627004DDC06 /* Const.m */,
 			);
 			path = domain;
 			sourceTree = "<group>";
@@ -594,8 +594,8 @@
 		1CA1A01B20400A82005068A7 /* utils */ = {
 			isa = PBXGroup;
 			children = (
-				1C8F35712043E2D1004DDC06 /* ColorUtils.h */,
-				1C8F35722043E2D1004DDC06 /* ColorUtils.m */,
+				1C8F35782043F5D4004DDC06 /* ColorUtil.h */,
+				1C8F35792043F5D4004DDC06 /* ColorUtil.m */,
 				1CA1A01C20400A98005068A7 /* DateUtils.h */,
 				1CA1A01D20400A98005068A7 /* DateUtils.m */,
 			);
@@ -797,19 +797,19 @@
 				1C51D3762040FA1400539BD3 /* GPUImageViewController.m in Sources */,
 				1CA19FBD203FE0E2005068A7 /* CaptivePortalCheck.m in Sources */,
 				1C51D3912040FF6900539BD3 /* APPQuestionSummaryController.m in Sources */,
-				1C8F35732043E2D1004DDC06 /* ColorUtils.m in Sources */,
 				1C51D3772040FA1400539BD3 /* TouchIDViewController.m in Sources */,
+				1C8F357D2043F627004DDC06 /* Const.m in Sources */,
 				1CA19FDF203FE29E005068A7 /* NSObject+ZJUIExtension.m in Sources */,
 				1CA19F88203FDBFA005068A7 /* main.m in Sources */,
 				1C51D3942041012B00539BD3 /* UIColor+Random.m in Sources */,
 				1C51D3752040FA1400539BD3 /* QQTmpChatViewController.m in Sources */,
 				1C51D3782040FA1400539BD3 /* WIFICheckViewController.m in Sources */,
 				1C51D3742040FA1400539BD3 /* DateCalendarController.m in Sources */,
+				1C8F357A2043F5D4004DDC06 /* ColorUtil.m in Sources */,
 				1C8F35702043E1E5004DDC06 /* WRCustomNavigationBar.m in Sources */,
 				1C51D38E2040FF2800539BD3 /* APPUISummaryController.m in Sources */,
 				1CA19F7A203FDBFA005068A7 /* AppDelegate.m in Sources */,
 				1C51D38B2040FEDD00539BD3 /* APPSummaryTabbarController.m in Sources */,
-				1CA19F91203FDC6E005068A7 /* Constant.m in Sources */,
 				1C51D37C2040FA1400539BD3 /* CountDownLabel.swift in Sources */,
 				1C51D37D2040FA1400539BD3 /* ILGLKImageView.m in Sources */,
 				1CA19FF7203FE78E005068A7 /* GPUImageSoulFilter.m in Sources */,

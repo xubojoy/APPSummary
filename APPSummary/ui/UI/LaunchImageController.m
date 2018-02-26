@@ -10,7 +10,6 @@
 #import <lottie-ios/Lottie/Lottie.h>
 #import "NSObject+ZJUIExtension.h"
 #import "UIView+ZJExtension.h"
-#import "Constant.h"
 
 @interface LaunchImageController ()<UIScrollViewDelegate>{
     CGFloat _phoneWidth;
