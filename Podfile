@@ -18,4 +18,5 @@ target 'APPSummary' do
      pod 'FDFullscreenPopGesture', '~> 1.1'
 #     pod 'AXWebViewController', '~> 0.7.1'
     pod 'FJAlertView', '~> 0.0.4'
+    pod 'MJExtension', '~> 3.0.13'
 end

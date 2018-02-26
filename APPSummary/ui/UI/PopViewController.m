@@ -49,9 +49,11 @@
     self.popMenuButtonView.delegate = self;
     self.popMenuButtonView.frame = CGRectMake(15, [WRNavigationBar navBarBottom], 50, 50);
     [self.view addSubview:self.popMenuButtonView];
-    
 }
 
+/**
+ 初始化alertView
+ */
 - (void)initFJAlertView{
     UIButton *btn = [UIButton buttonWithType:UIButtonTypeSystem];
     [btn setTitle:@"alertView" forState:UIControlStateNormal];
@@ -69,7 +71,7 @@
     NSLog(@"点击了-------%ld",(long)index);
     
 }
-
+#pragma mark btn点击事件--------------
 - (void)buttonPressed{
     FJAlertView *alert = [[FJAlertView alloc] initWithFrame:CGRectMake(0, 0, screen_width, screen_height) title:@"标题" message:@"内容" buttonTitle:nil];
     [alert show];
