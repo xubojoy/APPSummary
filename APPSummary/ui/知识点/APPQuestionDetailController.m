@@ -7,9 +7,9 @@
 //
 
 #import "APPQuestionDetailController.h"
-
+#import <WebKit/WebKit.h>
 @interface APPQuestionDetailController ()
-//@property (nonatomic, strong) UIWebView
+@property (nonatomic, strong) WKWebView *webView;
 @end
 
 @implementation APPQuestionDetailController

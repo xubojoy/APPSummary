@@ -19,7 +19,7 @@ PODS:
   - AXNavigationBackItemInjection (0.0.2)
   - AXPracticalHUD (2.0.2):
     - AXIndicatorView
-  - AXWebViewController (0.7.1):
+  - AXWebViewController (0.7.2):
     - Aspects
     - AXNavigationBackItemInjection
     - AXPracticalHUD
@@ -62,7 +62,7 @@ SPEC CHECKSUMS:
   AXIndicatorView: 566b490a2dd9781d4ffbcc9752be9b9cdc6e728e
   AXNavigationBackItemInjection: efe0446967f3cbcc85a9118decd1e145138912dd
   AXPracticalHUD: 16c3ff6d97c061e80e80897b2e6ac8e330079472
-  AXWebViewController: a4a78e3455c465b904c0510a3a0ecab5ef785fe0
+  AXWebViewController: 96566c473fce2806f4da696132b31777f5404c9f
   CYLTabBarController: c374643dea6dadece8bdff9c70f7387f8ffd7d08
   FDFullscreenPopGesture: a8a620179e3d9c40e8e00256dcee1c1a27c6d0f0
   GPUImage: 733a5f0fab92df9de1c37ba9df520a833ccb406d

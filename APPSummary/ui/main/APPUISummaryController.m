@@ -28,6 +28,12 @@
 - (void)viewWillAppear:(BOOL)animated{
     [super viewWillAppear:animated];
 //    [self.navigationController setNavigationBarHidden:NO];
+    //    启用大标题显示
+    if (@available(iOS 11.0, *)) {
+        self.navigationController.navigationBar.prefersLargeTitles = YES;
+    } else {
+        // Fallback on earlier versions
+    }
 }
 
 - (void)viewDidLoad {
@@ -36,12 +42,7 @@
     
     self.view.backgroundColor = [UIColor whiteColor];
     self.title = @"首页";
-    //    启用大标题显示
-    if (@available(iOS 11.0, *)) {
-        self.navigationController.navigationBar.prefersLargeTitles = YES;
-    } else {
-        // Fallback on earlier versions
-    }
+   
     
     self.dataUIArray = @[@"启动引导页动画",@"标签云",@"人脸识别",@"image处理",@"倒计时",@"画板",@"wifi认证",@"指纹识别",@"QQ临时会话"
                          ];
@@ -225,5 +226,14 @@
     
 }
 
+- (void)viewWillDisappear:(BOOL)animated{
+    [super viewWillDisappear:animated];
+    //    启用大标题显示
+    if (@available(iOS 11.0, *)) {
+        self.navigationController.navigationBar.prefersLargeTitles = NO;
+    } else {
+        // Fallback on earlier versions
+    }
+}
 
 @end
