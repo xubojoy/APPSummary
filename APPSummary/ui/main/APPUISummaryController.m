@@ -51,8 +51,6 @@
     [self initSearch];
 }
 
-
-
 - (void)initTableView{
     self.tableView = [[UITableView alloc] initWithFrame:CGRectMake(0,0, self.view.bounds.size.width, self.view.bounds.size.height) style:UITableViewStyleGrouped];
     self.tableView.dataSource = self;

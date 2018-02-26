@@ -87,7 +87,6 @@
 		1C8F35D32043FF79004DDC06 /* 339744.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 1C8F35AA2043FF78004DDC06 /* 339744.mp3 */; };
 		1C8F35D42043FF79004DDC06 /* Musics.plist in Resources */ = {isa = PBXBuildFile; fileRef = 1C8F35AB2043FF78004DDC06 /* Musics.plist */; };
 		1C8F35D7204400EB004DDC06 /* MusicListController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1C8F35D6204400EB004DDC06 /* MusicListController.m */; };
-		1C8F35DB204401F0004DDC06 /* MusicListModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 1C8F35DA204401F0004DDC06 /* MusicListModel.m */; };
 		1C8F35EA204402FB004DDC06 /* NeteaseMusicAPI.m in Sources */ = {isa = PBXBuildFile; fileRef = 1C8F35DD204402FA004DDC06 /* NeteaseMusicAPI.m */; };
 		1C8F35EB204402FB004DDC06 /* QQLrcDataTool.m in Sources */ = {isa = PBXBuildFile; fileRef = 1C8F35E3204402FB004DDC06 /* QQLrcDataTool.m */; };
 		1C8F35EC204402FB004DDC06 /* QQTimeTool.m in Sources */ = {isa = PBXBuildFile; fileRef = 1C8F35E5204402FB004DDC06 /* QQTimeTool.m */; };
@@ -255,8 +254,6 @@
 		1C8F35AB2043FF78004DDC06 /* Musics.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Musics.plist; sourceTree = "<group>"; };
 		1C8F35D5204400EB004DDC06 /* MusicListController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MusicListController.h; sourceTree = "<group>"; };
 		1C8F35D6204400EB004DDC06 /* MusicListController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MusicListController.m; sourceTree = "<group>"; };
-		1C8F35D9204401F0004DDC06 /* MusicListModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MusicListModel.h; sourceTree = "<group>"; };
-		1C8F35DA204401F0004DDC06 /* MusicListModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MusicListModel.m; sourceTree = "<group>"; };
 		1C8F35DD204402FA004DDC06 /* NeteaseMusicAPI.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NeteaseMusicAPI.m; sourceTree = "<group>"; };
 		1C8F35DE204402FA004DDC06 /* NeteaseMusicAPI.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NeteaseMusicAPI.h; sourceTree = "<group>"; };
 		1C8F35E0204402FB004DDC06 /* QQTimeTool.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QQTimeTool.h; sourceTree = "<group>"; };
@@ -592,8 +589,6 @@
 				1C8F35F520440503004DDC06 /* QQMusicMessageModel.m */,
 				1C8F35F320440503004DDC06 /* QQMusicModel.h */,
 				1C8F35F020440503004DDC06 /* QQMusicModel.m */,
-				1C8F35D9204401F0004DDC06 /* MusicListModel.h */,
-				1C8F35DA204401F0004DDC06 /* MusicListModel.m */,
 			);
 			path = model;
 			sourceTree = "<group>";
@@ -1076,7 +1071,6 @@
 				1C51D3802040FA1400539BD3 /* AIViewController.m in Sources */,
 				1CA19F95203FE01E005068A7 /* UIView+ZJExtension.m in Sources */,
 				1C8F356F2043E1E5004DDC06 /* WRNavigationBar.m in Sources */,
-				1C8F35DB204401F0004DDC06 /* MusicListModel.m in Sources */,
 				1C51D3A02041430700539BD3 /* APPQuestionDetailController.m in Sources */,
 				1C51D3762040FA1400539BD3 /* GPUImageViewController.m in Sources */,
 				1CA19FBD203FE0E2005068A7 /* CaptivePortalCheck.m in Sources */,
