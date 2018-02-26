@@ -9,7 +9,7 @@
 #import "TouchIDViewController.h"
 #import <LocalAuthentication/LocalAuthentication.h>
 @interface TouchIDViewController ()
-
+@property (nonatomic, strong) WRCustomNavigationBar *customNavBar;
 @end
 
 @implementation TouchIDViewController
@@ -18,7 +18,22 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view.
     self.view.backgroundColor = [UIColor whiteColor];
+    [self initHeaderView];
     [self authenticateUser];
+}
+
+/**
+ 初始化导航
+ */
+- (void)initHeaderView{
+    self.customNavBar = [WRCustomNavigationBar CustomNavigationBar];
+    self.customNavBar.barBackgroundColor = [UIColor brownColor];
+    [self.view addSubview:self.customNavBar];
+    [self.customNavBar wr_setBottomLineHidden:YES];
+    self.customNavBar.leftButton.hidden = YES;
+    //    self.customNavBar.title = @"UI";
+    // 设置初始导航栏透明度
+    [self.customNavBar wr_setBackgroundAlpha:1];
 }
 
 - (void)authenticateUser

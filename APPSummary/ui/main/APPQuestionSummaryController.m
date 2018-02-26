@@ -20,7 +20,7 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view.
     self.view.backgroundColor = [UIColor whiteColor];
-    self.dataArray = @[@"iOS开发中的八种锁(Lock)",@"如何设定线程池中线程的数目"];
+    self.dataArray = @[@"iOS开发中的八种锁(Lock)",@"如何设定线程池中线程的数目",@"如何用HTTP实现长连接"];
     [self initTableView];
 }
 
@@ -87,6 +87,10 @@
             break;
         case 1:
             urlStr = @"http://xubojoy.cn/2018/02/26/%E5%A6%82%E4%BD%95%E8%AE%BE%E5%AE%9A%E7%BA%BF%E7%A8%8B%E6%B1%A0%E4%B8%AD%E7%BA%BF%E7%A8%8B%E7%9A%84%E6%95%B0%E7%9B%AE/#more";
+            break;
+            
+        case 2:
+            urlStr = @"http://xubojoy.cn/2018/02/26/%E5%A6%82%E4%BD%95%E7%94%A8HTTP%E5%AE%9E%E7%8E%B0%E9%95%BF%E8%BF%9E%E6%8E%A5/#more";
             break;
             
         default:

@@ -45,6 +45,32 @@ OBJC_EXTERN CFStringRef MGCopyAnswer(CFStringRef key) WEAK_IMPORT_ATTRIBUTE;
 #define BABlodFont(size) [UIFont systemFontOfSize:size weight:UIFontWeightBold]
 #define BAWhiteColor [UIColor whiteColor] //白色
 
+//#to 适配X--------------------
+#define IOS8  ([[[UIDevice currentDevice] systemVersion] floatValue] >= 8.0)?YES:NO
+
+#define kDevice_Is_iPhoneX ([UIScreen instancesRespondToSelector:@selector(currentMode)] ? CGSizeEqualToSize(CGSizeMake(1125, 2436), [[UIScreen mainScreen] currentMode].size) : NO)
+
+#define Nav_Height (kDevice_Is_iPhoneX ? 88 : 64)
+#define Status_Height (kDevice_Is_iPhoneX ? 44 : 20)
+#define Tabbar_Height (kDevice_Is_iPhoneX ? 83 : 49)
+
+#define splite_line_height 0.5
+
+//字体大小
+#define font_10_size  10
+#define font_11_size   11
+#define font_12_size     12
+#define font_13_size 13
+#define font_14_size   14
+#define font_15_size 15
+#define font_16_size       16
+#define font_17_size  17
+#define font_18_size    18
+#define font_24_size   24
+
+//颜色
+#define splite_line_color         @"#cccccc"
+
 @interface Constant : NSObject
 
 @end

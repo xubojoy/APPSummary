@@ -7,10 +7,12 @@
 //
 
 #import "APPSummaryNavigationController.h"
+//#import <UINavigationController+FDFullscreenPopGesture.h>
 
 @interface APPSummaryNavigationController ()
 /** 系统的右划返回功能的代理记录 */
 @property (nonatomic, strong) id popGesDelegate;
+
 @end
 
 @implementation APPSummaryNavigationController
@@ -19,10 +21,9 @@
     [super viewDidLoad];
     
     self.navigationBar.hidden = NO;
-    
-    
     [self setupPOPGes];
 }
+
 /*
  #pragma mark - 全局侧滑代码------------BEGIN----
  - (void)getSystemGestureOfBack

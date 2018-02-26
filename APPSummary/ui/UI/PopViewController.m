@@ -1,19 +1,20 @@
 //
-//  DateCalendarController.m
+//  PopViewController.m
 //  APPSummary
 //
-//  Created by xubojoy on 2018/2/23.
+//  Created by xubojoy on 2018/2/26.
 //  Copyright © 2018年 xubojoy. All rights reserved.
 //
 
-#import "DateCalendarController.h"
-#import "DateUtils.h"
+#import "PopViewController.h"
+#import "GBPopMenuButtonView.h"
 #import "Constant.h"
-@interface DateCalendarController ()
+@interface PopViewController ()<GBMenuButtonDelegate>
 @property (nonatomic, strong) WRCustomNavigationBar *customNavBar;
+@property (nonatomic, strong) GBPopMenuButtonView *popMenuButtonView;
 @end
 
-@implementation DateCalendarController
+@implementation PopViewController
 
 - (void)viewDidLoad {
     [super viewDidLoad];
@@ -21,7 +22,7 @@
     [self.navigationController setNavigationBarHidden:YES];
     self.view.backgroundColor = [UIColor whiteColor];
     [self initHeaderView];
-    [self initUI];
+    [self initPopMenuButtonView];
 }
 
 /**
@@ -33,19 +34,29 @@
     [self.view addSubview:self.customNavBar];
     [self.customNavBar wr_setBottomLineHidden:YES];
     self.customNavBar.leftButton.hidden = YES;
-//    self.customNavBar.title = @"UI";
+    //    self.customNavBar.title = @"UI";
     // 设置初始导航栏透明度
     [self.customNavBar wr_setBackgroundAlpha:1];
 }
 
-- (void)initUI{
-    UILabel *label = [[UILabel alloc] initWithFrame:CGRectMake(0, [WRNavigationBar navBarBottom]+1, screen_width, screen_height)];
-    label.text = [NSString stringWithFormat:@"明天：%@ \n 下周：%@ \n 下月：%@",[DateUtils currentCycleEndTimeStrWithType:EndTimeTypeDay],[DateUtils currentCycleEndTimeStrWithType:EndTimeTypeWeek],[DateUtils currentCycleEndTimeStrWithType:EndTimeTypeMonth]];
-    label.font = [UIFont systemFontOfSize:15];
-    label.numberOfLines = 0;
-    [self.view addSubview:label];
+/**
+ 初始化弹出按钮
+ */
+- (void)initPopMenuButtonView{
+    self.popMenuButtonView = [[GBPopMenuButtonView alloc] initWithItems:@[@"00",@"90",@"80",@"年度"] size:CGSizeMake(50, 50) type:GBMenuButtonTypeLineRight isMove:YES];
+    self.popMenuButtonView.backgroundColor = [UIColor orangeColor];
+    self.popMenuButtonView.delegate = self;
+    self.popMenuButtonView.frame = CGRectMake(15, [WRNavigationBar navBarBottom], 50, 50);
+    [self.view addSubview:self.popMenuButtonView];
+    
 }
 
+#pragma mark GBMenuButtonDelegate--------
+- (void)menuButtonSelectedAtIdex:(NSInteger)index{
+    [self.popMenuButtonView hideItems];
+    NSLog(@"点击了-------%ld",(long)index);
+    
+}
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
