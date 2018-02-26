@@ -10,7 +10,7 @@
 #import "DateUtils.h"
 #import "Constant.h"
 @interface DateCalendarController ()
-
+@property (nonatomic, strong) WRCustomNavigationBar *customNavBar;
 @end
 
 @implementation DateCalendarController
@@ -18,12 +18,28 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
+    [self.navigationController setNavigationBarHidden:YES];
     self.view.backgroundColor = [UIColor whiteColor];
+    [self initHeaderView];
     [self initUI];
 }
 
+/**
+ 初始化导航
+ */
+- (void)initHeaderView{
+    self.customNavBar = [WRCustomNavigationBar CustomNavigationBar];
+    self.customNavBar.barBackgroundColor = [UIColor brownColor];
+    [self.view addSubview:self.customNavBar];
+    [self.customNavBar wr_setBottomLineHidden:YES];
+    self.customNavBar.leftButton.hidden = YES;
+//    self.customNavBar.title = @"UI";
+    // 设置初始导航栏透明度
+    [self.customNavBar wr_setBackgroundAlpha:1];
+}
+
 - (void)initUI{
-    UILabel *label = [[UILabel alloc] initWithFrame:CGRectMake(0, 0, screen_width, screen_height)];
+    UILabel *label = [[UILabel alloc] initWithFrame:CGRectMake(0, [WRNavigationBar navBarBottom]+1, screen_width, screen_height)];
     label.text = [NSString stringWithFormat:@"明天：%@ \n 下周：%@ \n 下月：%@",[DateUtils currentCycleEndTimeStrWithType:EndTimeTypeDay],[DateUtils currentCycleEndTimeStrWithType:EndTimeTypeWeek],[DateUtils currentCycleEndTimeStrWithType:EndTimeTypeMonth]];
     label.font = [UIFont systemFontOfSize:15];
     label.numberOfLines = 0;

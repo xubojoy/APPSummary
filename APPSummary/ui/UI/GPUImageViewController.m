@@ -34,6 +34,7 @@
 @property(nonatomic,strong) dispatch_queue_t renderQueue;
 
 @property (nonatomic, strong) GPUImagePicture *picture;
+@property (nonatomic, strong) WRCustomNavigationBar *customNavBar;
 @end
 
 @implementation GPUImageViewController
@@ -42,12 +43,26 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view, typically from a nib.
     self.view.backgroundColor = [UIColor whiteColor];
+    [self initHeaderView];
     _renderQueue = dispatch_queue_create("com.renderQueue", DISPATCH_QUEUE_SERIAL);
 //    视频添加滤镜
     [self setUpUI];
 //    图片添加滤镜
     [self setUpImage];
     _scaleCount = 1.1;
+}
+/**
+ 初始化导航
+ */
+- (void)initHeaderView{
+    self.customNavBar = [WRCustomNavigationBar CustomNavigationBar];
+    self.customNavBar.barBackgroundColor = [UIColor brownColor];
+    [self.view addSubview:self.customNavBar];
+    [self.customNavBar wr_setBottomLineHidden:YES];
+    self.customNavBar.leftButton.hidden = YES;
+    //    self.customNavBar.title = @"UI";
+    // 设置初始导航栏透明度
+    [self.customNavBar wr_setBackgroundAlpha:1];
 }
 
 - (void)setUpImage{

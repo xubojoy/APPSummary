@@ -17,7 +17,9 @@
 #import "TouchIDViewController.h"
 #import "QQTmpChatViewController.h"
 #import "DateCalendarController.h"
+#import "PopViewController.h"
 #import "Constant.h"
+
 @interface APPUISummaryController ()
 @property (nonatomic, strong) NSArray *dataUIArray;
 @property (nonatomic, strong) NSArray *dataArray;
@@ -27,29 +29,29 @@
 
 - (void)viewWillAppear:(BOOL)animated{
     [super viewWillAppear:animated];
-//    [self.navigationController setNavigationBarHidden:NO];
-}
-
-- (void)viewDidLoad {
-    [super viewDidLoad];
-    // Do any additional setup after loading the view, typically from a nib.
-    
     self.view.backgroundColor = [UIColor whiteColor];
     self.title = @"首页";
+    [self.navigationController setNavigationBarHidden:NO];
     //    启用大标题显示
     if (@available(iOS 11.0, *)) {
         self.navigationController.navigationBar.prefersLargeTitles = YES;
     } else {
         // Fallback on earlier versions
     }
-    
-    self.dataUIArray = @[@"启动引导页动画",@"标签云",@"人脸识别",@"image处理",@"倒计时",@"画板",@"wifi认证",@"指纹识别",@"QQ临时会话"
+}
+
+- (void)viewDidLoad {
+    [super viewDidLoad];
+    // Do any additional setup after loading the view, typically from a nib.
+    self.dataUIArray = @[@"启动引导页动画",@"标签云",@"人脸识别",@"image处理",@"倒计时",@"画板",@"wifi认证",@"指纹识别",@"QQ临时会话",@"弹出视图"
                          ];
     self.dataArray = @[@"时间计算"
                        ];
     [self initTableView];
     [self initSearch];
 }
+
+
 
 - (void)initTableView{
     self.tableView = [[UITableView alloc] initWithFrame:CGRectMake(0,0, self.view.bounds.size.width, self.view.bounds.size.height) style:UITableViewStyleGrouped];
@@ -205,6 +207,12 @@
                 [self.navigationController pushViewController:qqtmpvc animated:YES];
             }
                 break;
+            case 9:
+            {
+                PopViewController *popvc = [[PopViewController alloc] init];
+                [self.navigationController pushViewController:popvc animated:YES];
+            }
+                break;
             default:
                 break;
         }
@@ -225,5 +233,14 @@
     
 }
 
+- (void)viewWillDisappear:(BOOL)animated{
+    [super viewWillDisappear:animated];
+    //    启用大标题显示
+    if (@available(iOS 11.0, *)) {
+        self.navigationController.navigationBar.prefersLargeTitles = NO;
+    } else {
+        // Fallback on earlier versions
+    }
+}
 
 @end

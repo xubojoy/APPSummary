@@ -16,5 +16,5 @@ target 'APPSummary' do
      pod 'IQKeyboardManager', '~> 5.0.7'
 #     pod 'FTLinearActivityIndicator', '~> 1.0.4'
      pod 'FDFullscreenPopGesture', '~> 1.1'
-     pod 'AXWebViewController', '~> 0.7.1'
+#     pod 'AXWebViewController', '~> 0.7.1'
 end
